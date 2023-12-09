@@ -1,6 +1,6 @@
 # LogCollector
 This is a Powershell script to collect logs and back them up on a storage.  
-<h1>Configuring The Script:  </h1>
+<h1>Configuring The Script  </h1>
 $storage variable with your destination path<br />
 $hostMachines variable with your hosts to collect logs (you can declare them using hostname or fqdn)<br />
 <h1>Using The Script  </h1>
