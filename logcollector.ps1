@@ -51,6 +51,7 @@ Set-Alias Start-7Zip $7zip
 $7zsrc=Get-ChildItem -Path $dest -Exclude log, *.zip | Where-Object {$_.LastWriteTime -gt (Get-Date).AddMinutes(-30)}
 if ($7zsrc -ne $null) {Start-7zip a -m0=lzma -mx=1 $desZip $7zsrc}
 
+<# purge garbage #>
 Get-ChildItem -LiteralPath $dest -File -Recurse | Remove-Item -Recurse -Force -Exclude *.zip, *.txt
 Stop-Transcript
 
