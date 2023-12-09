@@ -2,7 +2,7 @@
 This is a Powershell script to collect logs and back them up on a storage.  
 <h1>Configuring The Script  </h1>
 $storage variable with your destination path<br />
-$hostMachines variable with your hosts to collect logs (you can declare them using hostname or fqdn)<br />
+$hosts variable with your hosts to collect logs (you can declare them using hostname or fqdn)<br />
 <h1>Using The Script  </h1>
 - Should be scheduled to run every 30 minutes.<br />
 - Should be scheduled only in 1 machine. We suggest to use a server that IS NOT a CORE or SQL machine.<br />
