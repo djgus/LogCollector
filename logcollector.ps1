@@ -1,10 +1,10 @@
 <# ········· collect logs - v4.0.6 ···········
-- set hosts on $hostMachines array variable
+- set hosts on $hosts array variable
 - change destination path on $storage variable
 ············································ #>
 
 <# define a list of host machine names in an array #>
-$hostMachines = @("CORE.gus.local", "DB.gus.local")
+$hosts = @("CORE.gus.local", "DB.gus.local")
 $date=Get-Date -Format yyMMdd_HHmmss
 
 <# destination for logs collected #>
@@ -34,7 +34,7 @@ $log >> $GLOBAL_LogFile_TargetPath.Replace("{DATE}", $(get-date).toString("yyMMd
 }
 
 <# iterate through the list of hosts #>
-foreach ($machine in $hostMachines) {
+foreach ($machine in $hosts) {
 log_info -message "$ iteration for $machine"
 $src="\\$machine\$LogDirectory"
 $dest="$storage\$machine"
