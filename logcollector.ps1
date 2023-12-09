@@ -1,4 +1,4 @@
-###collect logs - Gustavo Bonasso / Laurent Goetz - v4.0.6
+###collect logs - v4.0.6
 ###set hosts on $hostMachines array variable
 ###change destination path on $storage variable
 ###added transcript to get logs of when the script is running.
