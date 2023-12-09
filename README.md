@@ -12,4 +12,4 @@ $hosts variable with your hosts to collect logs (you can declare them using host
 - By default, will purge all files older than 5 days.<br />
 feel free to modify the last line on the script with a different number than 5, to fit your log backup retention policy.<br />
 - Keep in mind that for zipping, the script uses -m0=lzma which means that the native Windows zip opener may not open these zip files (depends on the Windows version). Please open zip files with 7-zip.<br />
-- Zip files are done by using 7-Zip binaries. 7-Zip is licensed under the GNU LGPL license. www.7-zip.org
+- Zip files are created by using 7-Zip binaries. 7-Zip is licensed under the GNU LGPL license. www.7-zip.org
