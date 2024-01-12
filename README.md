@@ -6,7 +6,7 @@ $hosts variable with your hosts to collect logs (you can declare them using host
 <h1>Using The Script  </h1>
 - Should be scheduled to run every 30 minutes.<br />
 - Should be scheduled only in 1 machine. We suggest to use a server that IS NOT a CORE or SQL machine.<br />
-- Runs on powershell 3.0 or higher<br />
+- Consider always using the latest powershell version<br />
 - Intended for Galaxy 5 (4.0.352, 4.0.376, 4.0.383).<br />
 (it can run on other versions too, but you will have to modify the $LogDirectory variable)<br />
 - By default, will purge all files older than 5 days.<br />
