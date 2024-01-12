@@ -1,4 +1,4 @@
-<# ········· collect logs - v4.0.6 ···········
+<# ········· collect logs - v4.0.7 ···········
 - set hosts on $hosts array variable
 - change destination path on $storage variable
 ············································ #>
@@ -43,7 +43,7 @@ if (!(Test-Path -path $dest\log)) {New-Item $dest\log -Type Directory}
 $desZip="$storage\$machine\$($date)_$($machine).zip"
 
 Start-Transcript -LiteralPath "$storage\$machine\log\log_$date.txt"
-Get-ChildItem -Path $src -File -Recurse -Exclude *-info.log -Include *.log | Where-Object {$_.LastWriteTime -ge (Get-Date).AddHours(-6)} | Copy-Item -Destination $dest
+Get-ChildItem -Path $src -File -Recurse -Depth 1 -Exclude *-info.log -Include *.log | Where-Object {$_.LastWriteTime -ge (Get-Date).AddHours(-6)} | Copy-Item -Destination $dest
 
 <# 7zip files #>
 $7zip=$PSScriptRoot + "\7z.exe"
