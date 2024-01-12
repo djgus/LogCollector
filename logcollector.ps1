@@ -43,7 +43,7 @@ if (!(Test-Path -path $dest\log)) {New-Item $dest\log -Type Directory}
 $desZip="$storage\$machine\$($date)_$($machine).zip"
 
 Start-Transcript -LiteralPath "$storage\$machine\log\log_$date.txt"
-Get-ChildItem -Path $src -Recurse -Depth 1 -Exclude *-info.log -Include *.log | Where-Object {$_.LastWriteTime -ge (Get-Date).AddHours(-6)} | Copy-Item -Destination $dest
+Get-ChildItem -File -Path $src -Recurse -Depth 1 -Exclude *-info.log -Include *.log | Where-Object {$_.LastWriteTime -ge (Get-Date).AddHours(-6)} | Copy-Item -Destination $dest
 
 <# 7zip files #>
 $7zip=$PSScriptRoot + "\7z.exe"
